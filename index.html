@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Doble Scroll</title>
+    <link rel="stylesheet" href="style/css.css">
+    <script defer src="js.js"></script>
+</head>
+
+<body>
+
+    <header>MasterPlan</header> <br>
+
+    <div class="carruseles">
+
+        <!-- PRIMER CARRUSEL -->
+
+        <div class="carrusel-item">
+            <div class="carrusel-contenido">
+                <div class="carrusel-imagenes">
+                    <img src="images/fondo_lienzo1.png" alt="FONDO 1" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen1.png" alt="Imagen A" class="img" data-reacts="👍 80 | 💬 15 | ⬆️ 3"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen2.png" alt="Imagen B" class="img" data-reacts="🔥 250 | 💬 45 | ⬆️ 10"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen3.png" alt="Imagen C" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen4.png" alt="Imagen D" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen5.png" alt="Imagen E" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+
+                </div>
+            </div>
+            <div class="botones">
+                <button class="flecha anterior" aria-label="Anterior">&#10094;</button>
+                <button class="flecha siguiente" aria-label="Siguiente">&#10095;</button>
+            </div>
+            <div class="reacts">
+                Reacciones
+            </div>
+            <div class="info">
+                <p></p>
+            </div>
+            <ul class="puntos">
+                <li class="punto activo" data-index="0"></li>
+                <li class="punto" data-index="1"></li>
+                <li class="punto" data-index="2"></li>
+                <li class="punto" data-index="3"></li>
+                <li class="punto" data-index="4"></li>
+                <li class="punto" data-index="5"></li>
+            </ul>
+        </div>
+        <br>
+        <hr><br>
+
+        <!-- SEGUNDO CARRUSEL -->
+
+        <div class="carrusel-item">
+            <div class="carrusel-contenido">
+                <div class="carrusel-imagenes">
+                    <img src="images/fondo_lienzo2.png" alt="FONDO 2" class="img" data-reacts="✨ 50 | 💬 10" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
+                        possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen1.png" alt="Imagen A" class="img" data-reacts="🎉 120 | 💬 30" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
+                        possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen2.png" alt="Imagen B" class="img" data-reacts="⭐ 75 | 💬 5" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Asperiores possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen3.png" alt="Imagen C" class="img" data-reacts="⭐ 75 | 💬 5" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Asperiores possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen4.png" alt="Imagen D" class="img" data-reacts="⭐ 75 | 💬 5" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Asperiores possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen5.png" alt="Imagen E" class="img" data-reacts="⭐ 75 | 💬 5" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Asperiores possimus, at sint laboriosam magni voluptas?">
+                </div>
+            </div>
+            <div class="botones">
+                <button class="flecha anterior" aria-label="Anterior">&#10094;</button>
+                <button class="flecha siguiente" aria-label="Siguiente">&#10095;</button>
+            </div>
+            <div class="reacts">
+            </div>
+
+            <div class="info">
+            </div>
+            <ul class="puntos">
+                <li class="punto activo" data-index="0"></li>
+                <li class="punto" data-index="1"></li>
+                <li class="punto" data-index="2"></li>
+                <li class="punto" data-index="3"></li>
+                <li class="punto" data-index="4"></li>
+                <li class="punto" data-index="5"></li>
+            </ul>
+        </div>
+        <br>
+        <hr><br>
+
+        <!-- TERCER CARRUSEL -->
+
+        <div class="carrusel-item">
+            <div class="carrusel-contenido">
+                <div class="carrusel-imagenes">
+                    <img src="images/fondo_lienzo3.png" alt="FONDO 3" class="img" data-reacts="✨ 50 | 💬 10" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
+                        possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen1.png" alt="Imagen A" class="img" data-reacts="👍 80 | 💬 15 | ⬆️ 3"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen2.png" alt="Imagen B" class="img" data-reacts="🔥 250 | 💬 45 | ⬆️ 10"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen3.png" alt="Imagen C" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen4.png" alt="Imagen D" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen5.png" alt="Imagen E" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+
+                </div>
+                <div class="botones">
+                    <button class="flecha anterior" aria-label="Anterior">&#10094;</button>
+                    <button class="flecha siguiente" aria-label="Siguiente">&#10095;</button>
+                </div>
+                <div class="reacts">
+                </div>
+                <div class="info">
+                </div>
+                <ul class="puntos">
+                    <li class="punto activo" data-index="0"></li>
+                    <li class="punto" data-index="1"></li>
+                    <li class="punto" data-index="2"></li>
+                    <li class="punto" data-index="3"></li>
+                    <li class="punto" data-index="4"></li>
+                    <li class="punto" data-index="5"></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr><br>
+
+        <!-- CUARTO CARRUSEL -->
+
+
+        <div class="carrusel-item">
+            <div class="carrusel-contenido">
+                <div class="carrusel-imagenes">
+                    <img src="images/fondo_lienzo4.png" alt="FONDO 4" class="img" data-reacts="✨ 50 | 💬 10" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
+                        possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen1.png" alt="Imagen A" class="img" data-reacts="👍 80 | 💬 15 | ⬆️ 3"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen2.png" alt="Imagen B" class="img" data-reacts="🔥 250 | 💬 45 | ⬆️ 10"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen3.png" alt="Imagen C" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen4.png" alt="Imagen D" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen5.png" alt="Imagen E" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+
+                </div>
+                <div class="botones">
+                    <button class="flecha anterior" aria-label="Anterior">&#10094;</button>
+                    <button class="flecha siguiente" aria-label="Siguiente">&#10095;</button>
+                </div>
+                <div class="reacts">
+                </div>
+                <div class="info">
+                </div>
+                <ul class="puntos">
+                    <li class="punto activo" data-index="0"></li>
+                    <li class="punto" data-index="1"></li>
+                    <li class="punto" data-index="2"></li>
+                    <li class="punto" data-index="3"></li>
+                    <li class="punto" data-index="4"></li>
+                    <li class="punto" data-index="5"></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr><br>
+
+        <!-- QUINTO CARRUSEL -->
+
+
+        <div class="carrusel-item">
+            <div class="carrusel-contenido">
+                <div class="carrusel-imagenes">
+                    <img src="images/fondo_lienzo5.png" alt="FONDO 5" class="img" data-reacts="✨ 50 | 💬 10" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
+                        possimus, at sint laboriosam magni voluptas?">
+                    <img src="images/imagen1.png" alt="Imagen A" class="img" data-reacts="👍 80 | 💬 15 | ⬆️ 3"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen2.png" alt="Imagen B" class="img" data-reacts="🔥 250 | 💬 45 | ⬆️ 10"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen3.png" alt="Imagen C" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen4.png" alt="Imagen D" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+                    <img src="images/imagen5.png" alt="Imagen E" class="img" data-reacts="❤️ 150 | 💬 20 | ⬆️ 5"
+                        data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus, at sint 
+                        laboriosam magni voluptas?">
+
+                </div>
+                <div class="botones">
+                    <button class="flecha anterior" aria-label="Anterior">&#10094;</button>
+                    <button class="flecha siguiente" aria-label="Siguiente">&#10095;</button>
+                </div>
+                <div class="reacts">
+                </div>
+                <div class="info">
+                </div>
+                <ul class="puntos">
+                    <li class="punto activo" data-index="0"></li>
+                    <li class="punto" data-index="1"></li>
+                    <li class="punto" data-index="2"></li>
+                    <li class="punto" data-index="3"></li>
+                    <li class="punto" data-index="4"></li>
+                    <li class="punto" data-index="5"></li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+
+        <!-- Footer -->
+
+    </div>
+
+
+
+</body>
+
+</html>
+<footer>
+    <p>gg</p>
+</footer>
