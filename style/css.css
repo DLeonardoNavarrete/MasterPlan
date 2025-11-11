@@ -5,32 +5,46 @@
 header {
     background: #8f2828;
     width: 80%;
+    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 1vw auto;
+    top: 0%;
+    left: 10%;
+    z-index: 100;
 }
 
 /* Contenedor principal de todos los carruseles */
 .carruseles {
-    margin: auto;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-type: y mandatory;
 }
 
 /* Contenedor individual de cada carrusel */
 .carrusel-item {
-    width: 50%;
-    margin: auto;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    scroll-snap-type: start;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0%;
+    transition: transform 0.75s ease-in-out;
+    object-fit: cover; 
     overflow: hidden;
-    /* ¡Clave! Oculta el contenido fuera del límite visible */
-    border: 1px solid #ccc;
-    border-radius: 8px;
 }
 
 /* El área visible donde se muestran las imágenes */
 .carrusel-contenido {
-    width: 100%;
+    width: 75%;
     position: relative;
-
 }
 
 /* Contenedor de las imágenes que se va a mover con JS */
@@ -112,9 +126,36 @@ p {
     height: 1em;
     justify-content: center;
 }
+/* 
+.vertical-navigation-arrows {
+    position: fixed; 
+    top: 50%; 
+    right: 10%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; 
+    z-index: 1000; 
+}
+
+.vertical-navigation-arrows button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white; 
+    border: none;
+    padding: 10px 5px;
+    margin: auto; 
+    cursor: pointer;
+    font-size: 1.5em; 
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.vertical-navigation-arrows button:hover {
+    background: rgba(0, 0, 0, 0.8);
+} */
 
 footer{
     background: #8f2828;
     margin: 0%;
-    opacity: none;
+    position: fixed;
+    z-index: 100;
 }
