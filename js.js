@@ -120,10 +120,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         actualizarCarrusel();
-    /* const imagenes = carruselImagenes.querySelectorAll('.img').length;
-        setInterval(() => {
-        indiceActual = (indiceActual + 1) % imagenes;
-        actualizarCarrusel();
-        }, 4500); // Cambia cada 3 segundos */
     });
 });
