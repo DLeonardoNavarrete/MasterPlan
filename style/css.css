@@ -1,8 +1,16 @@
-* {
+/* Estilos generales */
+html{
+    overflow-x: hidden;
     font-family: Helvetica;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
     background: #8f2828;
     width: 80%;
     height: 5vh;
@@ -10,14 +18,12 @@ header {
     justify-content: center;
     align-items: center;
     margin: 1vw auto;
-    top: 0%;
-    left: 10%;
     z-index: 100;
 }
 
 /* Contenedor principal de todos los carruseles */
 .carruseles {
-    margin: 0;
+    margin: none;
     height: 100vh;
     width: 100vw;
     scroll-snap-type: y mandatory;
@@ -56,8 +62,8 @@ header {
 
 /* Estilo de cada imagen dentro del carrusel */
 .carrusel-imagenes .img {
-    width: 90%;
-    margin: 5%;
+    width: 100%;
+    padding: 0;
     position: relative;
     flex-shrink: 0;
     height: auto;
@@ -122,40 +128,7 @@ p {
 }
 .botones {
     position: absolute;
-    z-index: 1;
+    z-index: 100;
     height: 1em;
     justify-content: center;
-}
-/* 
-.vertical-navigation-arrows {
-    position: fixed; 
-    top: 50%; 
-    right: 10%; 
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column; 
-    z-index: 1000; 
-}
-
-.vertical-navigation-arrows button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white; 
-    border: none;
-    padding: 10px 5px;
-    margin: auto; 
-    cursor: pointer;
-    font-size: 1.5em; 
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.vertical-navigation-arrows button:hover {
-    background: rgba(0, 0, 0, 0.8);
-} */
-
-footer{
-    background: #8f2828;
-    margin: 0%;
-    position: fixed;
-    z-index: 100;
 }
