@@ -3,11 +3,13 @@ html{
     overflow-x: hidden;
     font-family: Helvetica;
     box-sizing: border-box;
+    height: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 header, footer {
@@ -17,14 +19,14 @@ header, footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1vw auto;
+    margin: 0 auto;
     z-index: 100;
 }
 
 /* Contenedor principal de todos los carruseles */
 .carruseles {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     scroll-snap-type: y mandatory;
 }
@@ -32,7 +34,7 @@ header, footer {
 /* Contenedor individual de cada carrusel */
 .carrusel-item {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     scroll-snap-type: start;
     flex-shrink: 0;
@@ -104,7 +106,6 @@ p {
     margin: 0%;
     padding: 5%;
     width: 90%;
-    height: 10%;
 }
 
 .flecha,
