@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const carruselItems = document.querySelectorAll('.carrusel-item');
 
     carruselItems.forEach(carrusel => {
