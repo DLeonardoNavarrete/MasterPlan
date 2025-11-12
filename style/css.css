@@ -72,7 +72,7 @@ header, footer {
 
 /* Estilos para los puntos de navegación */
 .puntos {
-    list-style: 0;
+    list-style: none;
     display: flex;
     justify-content: space-evenly;
     padding: 0%;
@@ -94,7 +94,7 @@ header, footer {
 
 .reacts {
     padding: 5%;
-    font-size: 15px;
+    font-size: 1em;
     text-align: center;
     margin: 0%;
 }
