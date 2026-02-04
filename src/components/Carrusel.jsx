@@ -1,0 +1,50 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './Carrusel.css';
+import { Link } from 'react-router-dom';
+
+const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion }) => {
+  return (
+    <div className="carrusel-item">
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation={true}
+        pagination={{ clickable: true }}
+        loop={true}
+        className="carrusel-contenido"
+      >
+        {tituloSeccion &&(
+        <SwiperSlide>
+          <div className="bienvenida">
+            <h2>{tituloSeccion}</h2>
+            <p>{parrafoSeccion}</p>
+            <div className="bienvenida-indicador">Desliza →</div>
+          </div>
+          </SwiperSlide>
+          )}
+        {imagenes.map((img, i) => (
+          <SwiperSlide key={i}>
+            <div className="slide-container">
+              <Link key={i} to={img.link} >
+                <img src={img.src} alt={`Imagen${i}`} className="img" />
+              </Link>
+              {(img.reacts || img.info) && (
+                <div className='carrusel-sidebar'>
+                  <div className='reacts'>{img.reacts}</div>
+                  <div className='info'>
+                    <p>{img.info}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+}
+export default Carrusel;

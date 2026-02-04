@@ -1,0 +1,36 @@
+.detalle-contenedor {
+  min-height: 80vh;
+  background-color: #f8f9fa;
+}
+.detalle-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+.detalle-card img {
+  width: auto;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 70vh;
+}
+.detalle-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reacts-badge {
+  background: #ffebee;
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin: 0;
+}

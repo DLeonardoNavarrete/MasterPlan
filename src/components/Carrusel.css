@@ -1,0 +1,116 @@
+.carrusel-contenido {
+  width: 90%;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.carrusel-contenido .img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+.bienvenida {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+.bienvenida h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.bienvenida p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  color: #666;
+  line-height: 1.6;
+}
+.bienvenida-indicador {
+  font-weight: bold;
+  color: #8f2828;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+   0%,20%,50%,80%,100% {transform: translateX(0);}
+  40% {transform: translateX(-25px);}
+}
+
+/* Patallas grandes */
+@media screen and (min-width: 768px) {
+  .carrusel-contenido {
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+  }
+  .bienvenida{
+    height: 75vh;
+  }
+  .carrusel-contenido .img {
+    width: 70%;
+    min-height: 75vh;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+  .slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+  }
+  .carrusel-sidebar {
+    width: 30%;
+    height: auto;
+  }
+  .swiper-slide {
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+  }
+}
+  /* Pantallas chicas */
+@media screen and (max-width: 767px) {
+  .carrusel-contenido {
+    width: 100%;
+    margin: auto;
+  }
+  .bienvenida{
+    height: 40vh;
+  }
+  .carrusel-container {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .carrusel-sidebar{
+    height: 8vh;
+  }
+}
+.info-seccion-detalle {
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.info-seccion-detalle h2 {
+  color: #333;
+  font-size: 1.8rem;
+}
+.info-seccion-detalle p {
+  color: #666;
+}
