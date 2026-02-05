@@ -4,9 +4,9 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <header className="main-header">
-      <nav className="nav-container">
+      <h1 className="nav-container">
         <Link to="/" className="nav-logo">MasterPlan</Link>
-      </nav>
+      </h1>
     </header>
   );
 };

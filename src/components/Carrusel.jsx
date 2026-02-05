@@ -20,7 +20,7 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion }) => {
         {tituloSeccion &&(
         <SwiperSlide>
           <div className="bienvenida">
-            <h2>{tituloSeccion}</h2>
+            <h1>{tituloSeccion}</h1>
             <p>{parrafoSeccion}</p>
             <div className="bienvenida-indicador">Desliza →</div>
           </div>
