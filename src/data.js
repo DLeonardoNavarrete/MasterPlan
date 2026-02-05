@@ -70,7 +70,7 @@ export const detallesProyectos = [
     titulo: "Contáctanos",
     parrafo: "Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o soporte.",
     galeria: [
-      { src: "/images/MasterPlan-Contacto.webp", info:'3208233592' }
+      { src: "/images/MasterPlan-Contacto.webp", link:'https://wa.me/573208233592?text=Hola%20M_P%20estoy%20interesado%20en%20sus%20trabajos' ,info:'3208233592' }
     ]
   }
 ];
