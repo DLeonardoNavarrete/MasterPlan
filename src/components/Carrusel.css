@@ -1,3 +1,7 @@
+:root{
+    --primary-color: #8f2828;
+    --secundary-color: #ffffff;
+}
 .carrusel-contenido {
   width: 90%;
   margin: auto;
@@ -6,7 +10,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  background-color: white;
+  background-color: var(--secundary-color);
 }
 .carrusel-contenido .img {
   width: 100%;
@@ -36,7 +40,7 @@
 }
 .bienvenida-indicador {
   font-weight: bold;
-  color: #8f2828;
+  color: var(--primary-color);
   animation: bounce 2s infinite;
 }
 
@@ -53,7 +57,7 @@
     margin: auto;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    background-color: white;
+    background-color: var(--secundary-color);
   }
   .bienvenida{
     height: 75vh;
@@ -69,7 +73,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--secundary-color);
   }
   .carrusel-sidebar {
     width: 30%;
@@ -78,7 +82,7 @@
   .swiper-slide {
     overflow: hidden;
     border-radius: 15px;
-    background-color: white;
+    background-color: var(--secundary-color);
   }
 }
   /* Pantallas chicas */
@@ -91,7 +95,6 @@
     height: 40vh;
   }
   .carrusel-container {
-    background: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +107,7 @@
 }
 .info-seccion-detalle {
   text-align: center;
-  background: #fff;
+  background: var(--secundary-color);
   border-bottom: 1px solid #eee;
 }
 .info-seccion-detalle h2 {

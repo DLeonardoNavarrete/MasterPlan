@@ -1,7 +1,11 @@
+:root{
+    --primary-color: #8f2828;
+    --secundary-color: #ffffff;
+}
 .main-header {
   font-family: Helvetica;
-  background: #8f2828;
-  color: white;
+  background: var(--primary-color);
+  color: var(--secundary-color);
   width: 70%;
   height: 4vh;
   margin: 0 auto;
@@ -27,7 +31,7 @@
   font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: var(--secundary-color);
 }
 
 .nav-links {
@@ -36,7 +40,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: var(--secundary-color);
   text-decoration: none;
   transition: color 0.3s;
 }
