@@ -38,7 +38,7 @@ export const detallesProyectos = [
     id: "quienes-somos",
     titulo: "Nuestra Historia",
     parrafo: "Descubre cómo comenzó MasterPlan y nuestra evolución en la gestión de proyectos.",
-    galeria: [{src: "/images/logo.webp", reacts: "120 Likes", info: "Nuestro logo representa..." },
+    galeria: [{src: "/images/logo.webp", info: "Nuestro logo representa..." },
               { src: "/images/MasterPlan-equipo-de-trabajo.webp", link: "/proyecto/equipo-de-trabajo", info: "Nuestro equipo en acción" }]
   },
   {
@@ -59,10 +59,10 @@ export const detallesProyectos = [
   },
   {
     id: "equipo-de-trabajo",
-    titulo: "los compas",
+    titulo: "MP-Team",
     parrafo: "De los mejores equipos de todos los tiempos",
     galeria: [
-      { src: "/images/MasterPlan-equipo-de-trabajo.webp", info: "el mañas y el pelos" }
+      { src: "/images/MasterPlan-equipo-de-trabajo.webp", info: "AaBbCcDdEe" }
     ]
   },
   {
