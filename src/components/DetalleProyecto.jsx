@@ -16,9 +16,7 @@ const DetalleProyecto = () => {
       </div>
   );
 }
-
   const contenido = detallesProyectos.find(item => item.id === id);
-
   if (!contenido) {
     return <p>Contenido no encontrado en data.js</p>;
   }
