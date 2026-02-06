@@ -3,7 +3,8 @@
     --secundary-color: #ffffff;
     --font-family: Helvetica;
 }
-.carrusel-contenido {
+.carrusel-contenido,
+.skeleton-image {
   width: 90%;
   margin: auto;
   border-radius: 15px;
@@ -53,7 +54,8 @@
 
 /* Patallas grandes */
 @media screen and (min-width: 768px) {
-  .carrusel-contenido {
+  .carrusel-contenido,
+  .skeleton-image {
     width: 90%;
     margin: auto;
     border-radius: 15px;
@@ -63,7 +65,7 @@
   .bienvenida{
     height: 75vh;
   }
-  .carrusel-contenido .img {
+  .carrusel-contenido .img{
     width: 85%;
     min-height: 75vh;
     max-height: 75vh;
@@ -100,7 +102,7 @@
   .bienvenida{
     height: 40vh;
   }
-  .carrusel-container {
+  .carrusel-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,7 +127,7 @@
 }
 .btn-share {
   background: var(--primary-color);
-  color: white;
+  color: var(--secundary-color);
   border: none;
   padding: 8px 15px;
   border-radius: 20px;

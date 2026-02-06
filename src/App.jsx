@@ -2,8 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Carrusel from './components/Carrusel';
 import { carPrin } from './data';
-import './App.css';
-import './index.css';
 import DetalleImagen from './components/DetalleImagen';
 import DetalleProyecto from './components/DetalleProyecto';
 import { useState, useEffect } from 'react';

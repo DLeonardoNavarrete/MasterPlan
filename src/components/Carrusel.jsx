@@ -5,10 +5,10 @@ import 'swiper/css/pagination';
 import './Carrusel.css';
 import { Link } from 'react-router-dom';
 
-const handleShare = async (titulo, Texto, id)=>{
+const handleShare = async (titulo, texto, id)=>{
   const shareData={
     title: titulo,
-    text: Texto,
+    text: texto,
     url: `${window.location.origin}/proyecto/${id}`,
   };
   try {
@@ -22,7 +22,7 @@ const handleShare = async (titulo, Texto, id)=>{
     console.error("Error al compartir:", err);
   }
 };
-const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion }) => {
+const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
   return (
     <div className="carrusel-item">
       <Swiper
@@ -55,7 +55,7 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion }) => {
                   <div className='info'>
                     <p>{img.info}</p>
                   </div>
-                  <button className="btn-share" onClick={() =>handleShare(contenido.título, contenido.parrafo, contenido.id)}>
+                  <button className="btn-share" onClick={() =>handleShare(tituloSeccion, parrafoSeccion, idSeccion)}>
                     <i className='fa-solid fa-share-nodes'></i> Compartir
                   </button>
                 </div>

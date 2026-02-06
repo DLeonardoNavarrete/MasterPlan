@@ -2,7 +2,7 @@
     --primary-color: #8f2828;
     --secundary-color: #ffffff;
 }
-.main-header {
+.main-header{
   font-family: Helvetica;
   background: var(--primary-color);
   color: var(--secundary-color);
