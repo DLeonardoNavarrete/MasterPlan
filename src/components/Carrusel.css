@@ -1,6 +1,7 @@
 :root{
     --primary-color: #8f2828;
     --secundary-color: #ffffff;
+    --font-family: Helvetica;
 }
 .carrusel-contenido {
   width: 90%;
@@ -78,6 +79,11 @@
   .carrusel-sidebar {
     width: 30%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .swiper-slide {
     overflow: hidden;
@@ -116,4 +122,21 @@
 }
 .info-seccion-detalle p {
   color: #666;
+}
+.btn-share {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+.btn-share:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }

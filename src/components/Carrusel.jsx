@@ -5,6 +5,23 @@ import 'swiper/css/pagination';
 import './Carrusel.css';
 import { Link } from 'react-router-dom';
 
+const handleShare = async (titulo, Texto, id)=>{
+  const shareData={
+    title: titulo,
+    text: Texto,
+    url: `${window.location.origin}/proyecto/${id}`,
+  };
+  try {
+    if(navigator.share){
+      await navigator.share(shareData);
+    } else {
+      await navigator.clipboard.writeText(shareData.url);
+      alert("Enlace copiado al portapapeles");
+    }
+  } catch (err){
+    console.error("Error al compartir:", err);
+  }
+};
 const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion }) => {
   return (
     <div className="carrusel-item">
@@ -38,6 +55,9 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion }) => {
                   <div className='info'>
                     <p>{img.info}</p>
                   </div>
+                  <button className="btn-share" onClick={() =>handleShare(contenido.título, contenido.parrafo, contenido.id)}>
+                    <i className='fa-solid fa-share-nodes'></i> Compartir
+                  </button>
                 </div>
               )}
             </div>
