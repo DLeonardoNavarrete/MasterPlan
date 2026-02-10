@@ -6,9 +6,20 @@ import { useState, useEffect,} from 'react';
 const DetalleProyecto = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
+  const contenido = detallesProyectos.find(item => item.id.toLowerCase() === id?.toLowerCase());
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    setLoading(true);
+    const timer =setTimeout(()=>setLoading(false), 1000);
+    return () => clearTimeout(timer);
   }, [id]);
+  if (!contenido && !loading) {
+    return (
+      <div className="error-page">
+        <h2>Proyecto no encontrado</h2>
+        <p>Lo sentimos, el proyecto que buscas no existe.</p>
+      </div>
+    );
+  }
   if (loading) {
     return (<div className="detalle-page">
         <div className="skeleton skeleton-title" style={{ margin: '0 auto 20px' }}></div>
@@ -16,17 +27,13 @@ const DetalleProyecto = () => {
       </div>
   );
 }
-  const contenido = detallesProyectos.find(item => item.id === id);
-  if (!contenido) {
-    return <p>Contenido no encontrado en data.js</p>;
-  }
-
   return (
     <div className="detalle-page">
       <Carrusel
         imagenes={contenido.galeria}
         tituloSeccion={contenido.titulo}
         parrafoSeccion={contenido.parrafo}
+        idSeccion={contenido.id}
       />
     </div>
   );
