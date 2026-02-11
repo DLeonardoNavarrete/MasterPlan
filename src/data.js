@@ -9,7 +9,7 @@ export const carPrin = [
   {
     id: "que-hacemos",
     imagenes: [
-      { src: "images/Masterplan-trabajo-en-proceso.webp", link: "/proyecto/que-hacemos", info: "asi trabajamos" },
+      { src: "/images/Masterplan-trabajo-en-proceso.webp", link: "/proyecto/que-hacemos", info: "asi trabajamos" },
     ],
   },
   {
