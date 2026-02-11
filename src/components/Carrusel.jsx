@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
   const handleShare = async (titulo, texto, id) => {
-    const url = `${window.location.origin}/proyecto/${id}`;
+    const idFinal = id || imagenes[0]?.link?.split('/').pop();
+    const url = `${window.location.origin}/proyecto/${idFinal}`;
     try {
       if (navigator.share) {
         await navigator.share({ title: titulo, text: texto, url: url });
