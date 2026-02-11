@@ -39,7 +39,7 @@ export const detallesProyectos = [
     titulo: "Nuestra Historia",
     parrafo: "Descubre cómo comenzó MasterPlan y nuestra evolución en la gestión de proyectos.",
     galeria: [{src: "/images/logo.webp", info: "Nuestro logo representa..." },
-              { src: "/images/MasterPlan-equipo-de-trabajo.webp", link: "/proyecto/equipo-de-trabajo", info: "Nuestro equipo en acción" }]
+              {src: "/images/MasterPlan-equipo-de-trabajo.webp", info: "Nuestro equipo en acción", link: "/proyecto/equipo-de-trabajo"}]
   },
   {
     id: "que-hacemos",
@@ -70,7 +70,7 @@ export const detallesProyectos = [
     titulo: "Contáctanos",
     parrafo: "Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o soporte.",
     galeria: [
-      { src: "/images/MasterPlan-Contacto.webp", link:'https://wa.me/573208233592?text=Hola%20M_P%20estoy%20interesado%20en%20su%20interventoría' ,info:'3208233592', pestañaNueva:true}
+      { src: "/images/MasterPlan-Contacto.webp", info:'3208233592', link:'https://wa.me/573208233592?text=Hola%20M_P%20estoy%20interesado%20en%20su%20interventoría' , pestañaNueva:true}
     ]
   }
 ];
