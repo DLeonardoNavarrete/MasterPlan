@@ -42,7 +42,7 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
         {imagenes.map((img, i) => (
           <SwiperSlide key={i}>
             <div className="slide-container">
-              <Link key={i} to={img.link} target={img.pestañaNueva ? "_blank" : "_self"} rel={img.pestañaNueva ? "noopener noreferrer" : undefined} >
+              <Link to={img.link} target={img.pestañaNueva ? "_blank" : "_self"} rel={img.pestañaNueva ? "noopener noreferrer" : undefined} >
                 <img src={img.src} alt={`Imagen${i}`} className="img" />
               </Link>
               {(img.reacts || img.info) && (
