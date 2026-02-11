@@ -8,6 +8,20 @@ import { useState, useEffect } from 'react';
 import SkeletonCarrusel from './components/SkeletonCarrusel';
 
 const Home = () => {
+  return(
+    <div className="home-container">
+      {carPrin.map(seccion => (
+        <Carrusel
+          key={seccion.id}
+          idSeccion={seccion.id}
+          imagenes={seccion.imagenes}
+          tituloSeccion={seccion.id.replace('_', ' ')}
+          parrafoSeccion={seccion.imagenes[0]?.info}
+          />
+      ))}
+      </div>
+  );
+}
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,8 +40,6 @@ const Home = () => {
       )}
     </div>
   );
-};
-
 function App() {
   return (
     <Router>

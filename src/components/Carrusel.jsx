@@ -6,17 +6,13 @@ import './Carrusel.css';
 import { Link } from 'react-router-dom';
 
 const handleShare = async (titulo, texto, id)=>{
-  const shareData={
-    title: titulo,
-    text: texto,
-    url: `${window.location.origin}/proyecto/${id}`,
-  };
+  const url = `&{window.location.origin}/proyecto/${id}`;
   try {
     if(navigator.share){
-      await navigator.share(shareData);
+      await navigator.share({ title: titulo, text: texto, url: url });
     } else {
-      await navigator.clipboard.writeText(shareData.url);
-      alert("Enlace copiado al portapapeles");
+      await navigator.clipboard.writeText(url);
+      alert("Enlace copiado");
     }
   } catch (err){
     console.error("Error al compartir:", err);
