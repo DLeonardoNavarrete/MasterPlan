@@ -6,7 +6,7 @@ import { useState, useEffect,} from 'react';
 const DetalleProyecto = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
-  const contenido = detallesProyectos.find(item => item.id.toLowerCase() === id?.toLowerCase());
+  const contenido = detallesProyectos.find(seccion => seccion.id.toLowerCase() === id?.toLowerCase());
   useEffect(() => {
     const timer =setTimeout(()=>setLoading(false), 1000);
     return () => clearTimeout(timer);
