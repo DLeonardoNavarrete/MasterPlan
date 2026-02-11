@@ -42,8 +42,16 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
         {imagenes.map((img, i) => (
           <SwiperSlide key={i}>
             <div className="slide-container">
-              <Link to={img.link} target={img.pestañaNueva ? "_blank" : "_self"} rel={img.pestañaNueva ? "noopener noreferrer" : undefined} >
-                <img src={img.src} alt={`Imagen${i}`} className="img" />
+              <Link 
+                to={img.link || "#"}
+                target={img.pestañaNueva ? "_blank" : "_self"}
+                rel={img.pestañaNueva ? "noopener noreferrer" : undefined} 
+              >
+                <img 
+                  src={img.src} 
+                  alt={`Imagen${i}`} 
+                  className="img" 
+                />
               </Link>
               {(img.reacts || img.info) && (
                 <div className='carrusel-sidebar'>
@@ -51,7 +59,10 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
                   <div className='info'>
                     <p>{img.info}</p>
                   </div>
-                  <button className="btn-share" onClick={() => handleShare(tituloSeccion, parrafoSeccion, idSeccion)}>
+                  <button 
+                    className="btn-share" 
+                    onClick={() => handleShare(tituloSeccion, parrafoSeccion, idSeccion)}
+                  >
                     <i className='fa-solid fa-share-nodes'></i> Compartir
                   </button>
                 </div>
@@ -62,5 +73,5 @@ const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
       </Swiper>
     </div>
   );
-}
+};
 export default Carrusel;
