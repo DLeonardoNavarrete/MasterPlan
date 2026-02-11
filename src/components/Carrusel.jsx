@@ -6,7 +6,7 @@ import './Carrusel.css';
 import { Link } from 'react-router-dom';
 
 const handleShare = async (titulo, texto, id)=>{
-  const url = `&{window.location.origin}/proyecto/${id}`;
+  const url = `${window.location.origin}/proyecto/${id}`;
   try {
     if(navigator.share){
       await navigator.share({ title: titulo, text: texto, url: url });
