@@ -7,21 +7,21 @@ import { Link } from 'react-router-dom';
 
 const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {
   const handleShare = async (titulo, texto, id) => {
-    const idFinal = id || imagenes[0]?.link?.split('/').pop();
-    const url = `${window.location.origin}/proyecto/${idFinal}`;
+    const esIndex = window.location.pathname === '/';
+    const urlFinal = esIndex ? `${window.location.origin}/#/${id}` : window.location.href;
     try {
       if (navigator.share) {
-        await navigator.share({ title: titulo, text: texto, url: url });
+        await navigator.share({ title: titulo, text: texto, url: urlFinal });
       } else {
-        await navigator.clipboard.writeText(url);
-        alert("Enlace copiado");
+        await navigator.clipboard.writeText(urlFinal);
+        alert("Enlace copiado" + urlFinal);
       }
     } catch (err) {
       console.error("Error al compartir:", err);
     }
   };
   return (
-    <div className="carrusel-item">
+    <div className="carrusel-item" id={idSeccion}>
       <Swiper
         modules={[Pagination]}
         spaceBetween={0}
