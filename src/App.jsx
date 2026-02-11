@@ -8,38 +8,32 @@ import { useState, useEffect } from 'react';
 import SkeletonCarrusel from './components/SkeletonCarrusel';
 
 const Home = () => {
-  return(
-    <div className="home-container">
-      {carPrin.map(seccion => (
+const [loading, setLoading] = useState(true);
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 1500);
+  return () => clearTimeout(timer);
+}, []);
+return (
+  <div className="home-container">
+    {loading ? (
+      [1, 2, 3].map((n) => <SkeletonCarrusel key={n} />)
+    ) : (
+      carPrin.map(seccion => (
         <Carrusel
           key={seccion.id}
           idSeccion={seccion.id}
           imagenes={seccion.imagenes}
           tituloSeccion={seccion.id.replace('_', ' ')}
           parrafoSeccion={seccion.imagenes[0]?.info}
-          />
-      ))}
-      </div>
-  );
-}
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-  return (
-    <div className="home-container">
-      {loading ? (
-        [1, 2, 3].map((n) => <SkeletonCarrusel key={n} />)
-      ) : (
-        carPrin.map(item => (
-          <Carrusel key={item.id} imagenes={item.imagenes} tituloSeccion={item.id.replace('_', ' ')} />
-        ))
-      )}
-    </div>
-  );
+        />
+      ))
+    )}
+  </div>
+);
+};
+
 function App() {
   return (
     <Router>
