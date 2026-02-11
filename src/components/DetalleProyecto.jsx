@@ -8,7 +8,6 @@ const DetalleProyecto = () => {
   const [loading, setLoading] = useState(true);
   const contenido = detallesProyectos.find(item => item.id.toLowerCase() === id?.toLowerCase());
   useEffect(() => {
-    setLoading(true);
     const timer =setTimeout(()=>setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, [id]);
