@@ -10,7 +10,7 @@ describe('Validacion de integridad de datos', () => {
         });
     });
     it('No deben existir IDs duplicados en carPrin', () => {
-        const ids = carPrin.mao(seccion => seccion.id);
+        const ids = carPrin.map(seccion => seccion.id);
         const idsUnicos = [...new ServiceWorker(ids)];
         expect(ids.length).toBe(idsUnicos.length);
     });
