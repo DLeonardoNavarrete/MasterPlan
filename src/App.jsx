@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Carrusel from './components/Carrusel';
 import { carPrin } from './data';
 import DetalleImagen from './components/DetalleImagen';
@@ -56,9 +57,7 @@ function App() {
           <Route path="/detalle/:proyectoId/:imagenId" element={<DetalleImagen />} />
         </Routes>
       </main>
-      <footer className="main-footer">
-        <p>© 2026 MasterPlan - Gestión de Proyectos</p>
-      </footer>
+      <Footer />
     </Router>
   );
 }
