@@ -1,4 +1,4 @@
-export const SocialMedia = ({ className }) => {
+const SocialMedia = ({ className }) => {
     const redes =[
         {
             nombre:'Instagram',
@@ -30,3 +30,4 @@ export const SocialMedia = ({ className }) => {
         </div>
     );
 };
+export default SocialMedia;
