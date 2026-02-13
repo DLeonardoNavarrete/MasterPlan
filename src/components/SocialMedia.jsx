@@ -1,4 +1,4 @@
-const SocialMedia = ({ className }) => {
+export const SocialMedia = ({ className }) => {
     const redes =[
         {
             nombre:'Instagram',
@@ -22,6 +22,7 @@ const SocialMedia = ({ className }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-button"
+                style={{'--hover-color': red.color}}
                 >
                     <i className={red.icon}></i>
                 </a>
@@ -29,4 +30,3 @@ const SocialMedia = ({ className }) => {
         </div>
     );
 };
-export default SocialMedia;
