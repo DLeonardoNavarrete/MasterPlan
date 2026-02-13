@@ -3,7 +3,7 @@ const SocialMedia = ({ className }) => {
         {
             nombre:'Instagram',
             icon:'fa-brands fa-instagram',
-            url:'https://www.instagram.com/masterplan.proyectos/',
+            url:'https://www.instagram.com/masterplanurbano/',
             color:'#E4405F'
         },
         {
