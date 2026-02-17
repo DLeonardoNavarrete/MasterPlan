@@ -2,7 +2,7 @@ export const carPrin = [
   {
     id: "quienes-somos",
     imagenes: [
-      { src: "/images/logo.webp", link: "/proyecto/quienes-somos", info: "Somos" },
+      { src: "/images/i1.webp", link: "/proyecto/quienes-somos", info: "Somos" },
       { src: "/images/i2.webp", link: "/proyecto/quienes-somos", info: "MasterPlan" }
     ],
   },
