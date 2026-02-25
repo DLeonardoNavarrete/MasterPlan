@@ -8,5 +8,5 @@
     "framework": "vite",
     "installCommand": "npm install",
     "buildCommand": "npm test && vite build",
-    "claenUrls": true
+    "cleanUrls": true
 }
