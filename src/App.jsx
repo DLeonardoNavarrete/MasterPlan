@@ -7,6 +7,7 @@ import DetalleImagen from './components/DetalleImagen';
 import DetalleProyecto from './components/DetalleProyecto';
 import { useState, useEffect } from 'react';
 import SkeletonCarrusel from './components/SkeletonCarrusel';
+import Login from './componenets/Login';
 
 const Home = () => {
 const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ return (
 };
 
 function App() {
+  const [view, setView] = useState('home');
   return (
     <Router>
       <Navbar />
@@ -55,6 +57,15 @@ function App() {
           } />
           <Route path="/proyecto/:id" element={<DetalleProyecto />} />
           <Route path="/detalle/:proyectoId/:imagenId" element={<DetalleImagen />} />
+          {view === 'home' && (
+            <seccion className="home-section">
+              <button onClick={() => setView('login')}>Iniciar Sesión</button>
+              <Home />
+            </seccion>
+          )}
+          {view === 'login' && <Login onBack={() => setView('home')} />
+            }
+            
         </Routes>
       </main>
       <Footer />
