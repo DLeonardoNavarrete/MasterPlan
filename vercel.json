@@ -7,5 +7,6 @@
     ],
     "framework": "vite",
     "installCommand": "npm install",
-    "buildCommand": "npm test && vite build"
+    "buildCommand": "npm test && vite build",
+    "claenUrls": true
 }
