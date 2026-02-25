@@ -12,15 +12,15 @@ export default function Login() {
             password: password,
         });
         if (error) {
-            alert('Error logging in: ' + error.message);
+            alert('Error al loguearse: ' + error.message);
         } else {
-            alert('Logged in successfully!');
+            alert('El logueo fue exitoso!');
         }
     };
     return (
         <form onSubmit={handleLogin}>
             <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
-            <input type='password' placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)}/>
+            <input type="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)}/>
             <button type="submit">Iniciar Sesión</button>
         </form>
     );
