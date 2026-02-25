@@ -7,7 +7,7 @@ import DetalleImagen from './components/DetalleImagen';
 import DetalleProyecto from './components/DetalleProyecto';
 import { useState, useEffect } from 'react';
 import SkeletonCarrusel from './components/SkeletonCarrusel';
-import Login from './componenets/Login';
+import Login from './components/Login';
 
 const Home = () => {
 const [loading, setLoading] = useState(true);
