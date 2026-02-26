@@ -7,7 +7,7 @@ const AdminPanel = ({ session }) => {
   useEffect(() => {
     const fetchUserData = async () => {
       const { data, error } = await supabase
-        .from('registros_empresa') // Asegúrate de que este nombre coincida con tu tabla en Supabase
+        .from('registros_empresa')
         .select('*')
         .eq('user_id', session.user.id);
 
@@ -20,7 +20,7 @@ const AdminPanel = ({ session }) => {
   return (
     <div className="admin-panel">
       <h2>Panel de Control</h2>
-      <p>Bienvenido, <strong>{session?.user?.email}</strong></p>
+      <p>Bienvenido<strong>{session?.user?.email}</strong></p>
       <hr />
       <div className="data-table">
         {datos.length > 0 ? (
