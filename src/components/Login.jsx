@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import { supabase} from '../supabaseClient';
+import { supabase } from '../supabaseClient';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login({ onBack }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const navigate = useNavigate();
     const handleLogin = async (e) => {
         e.preventDefault();
-        const { error } = await supabase.auth.signInWithPassword({ 
+        const { error } = await supabase.auth.signInWithPassword({
             email: email,
             password: password,
         });
@@ -17,22 +18,25 @@ export default function Login({ onBack }) {
             alert('El logueo fue exitoso!');
             console.log("Usuario logueado: ", supabase.auth.user());
         }
+        if (!error) {
+            navigate('/admin');
+        }
     };
     return (
         <div className="login-container">
             <button onClick={onBack}>Volver</button>
             <h2>Inicias Sesión</h2>
             <form onSubmit={handleLogin}>
-                <input 
-                type="email" 
-                placeholder="Email" 
-                onChange={(e)=>setEmail(e.target.value)
-                    }/>
-                <input 
-                type="password" 
-                placeholder="Contraseña" 
-                onChange={ (e) => setPassword(e.target.value)
-                }/>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)
+                    } />
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    onChange={(e) => setPassword(e.target.value)
+                    } />
                 <button type="submit">Iniciar Sesión</button>
             </form>
         </div>

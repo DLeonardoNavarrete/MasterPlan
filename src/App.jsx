@@ -1,13 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { carPrin } from './data';
+import { useState, useEffect } from 'react';
+import { supabase } from './supabaseClient';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Carrusel from './components/Carrusel';
-import { carPrin } from './data';
 import DetalleImagen from './components/DetalleImagen';
 import DetalleProyecto from './components/DetalleProyecto';
-import { useState, useEffect } from 'react';
 import SkeletonCarrusel from './components/SkeletonCarrusel';
 import Login from './components/Login';
+import AdminPanel from './components/AdminPanel';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const Home = () => {
 const [loading, setLoading] = useState(true);
@@ -37,9 +40,19 @@ return (
 };
 
 function App() {
+  const [seccion, setSeccion] = useState(null);
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSeccion(session);
+    });
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSeccion(session);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
   return (
     <Router>
-      <Navbar />
+      <Navbar seccion={seccion}/>
       <main className="content-area">
         <Routes>
           <Route path="/" element={
@@ -50,6 +63,11 @@ function App() {
             </div>
           } />
           <Route path="/login" element={<Login />} />
+          <Route path="/login" element={
+            <ProtectedRoute seccion={seccion}>
+              <AdminPanel seccion={seccion} />
+            </ProtectedRoute>
+          }/>
           <Route path="/galeria" element={
             <div className="page-layout">
               <h2>Explorar Galería</h2>
