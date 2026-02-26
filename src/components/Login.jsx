@@ -6,16 +6,16 @@ export default function Login({ onBack }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const handleLogin = async (e) => {
-        e.preventDefault();
+    const handleLogin = async () => {
         const { error } = await supabase.auth.signInWithPassword({
-            email: email,
-            password: password,
+            email,
+            password,
         });
         if (error) {
-            alert('Error al loguearse: ' + error.message);
+            alert('Error: ' + error.message);
         } else {
-            alert('El logueo fue exitoso!');
+            navigate('/admin');
+            alert('Ya estás adentro!');
             console.log("Usuario logueado: ", supabase.auth.user());
         }
         if (!error) {
