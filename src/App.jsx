@@ -13,30 +13,30 @@ import AdminPanel from './components/AdminPanel';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const Home = () => {
-const [loading, setLoading] = useState(true);
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setLoading(false);
-  }, 1500);
-  return () => clearTimeout(timer);
-}, []);
-return (
-  <div className="home-container">
-    {loading ? (
-      [1, 2, 3].map((n) => <SkeletonCarrusel key={n} />)
-    ) : (
-      carPrin.map(seccion => (
-        <Carrusel
-          key={seccion.id}
-          idSeccion={seccion.id}
-          imagenes={seccion.imagenes}
-          tituloSeccion={seccion.id.replace('_', ' ')}
-          parrafoSeccion={seccion.imagenes[0]?.info}
-        />
-      ))
-    )}
-  </div>
-);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <div className="home-container">
+      {loading ? (
+        [1, 2, 3].map((n) => <SkeletonCarrusel key={n} />)
+      ) : (
+        carPrin.map(seccion => (
+          <Carrusel
+            key={seccion.id}
+            idSeccion={seccion.id}
+            imagenes={seccion.imagenes}
+            tituloSeccion={seccion.id.replace('_', ' ')}
+            parrafoSeccion={seccion.imagenes[0]?.info}
+          />
+        ))
+      )}
+    </div>
+  );
 };
 
 function App() {
@@ -52,16 +52,22 @@ function App() {
   }, []);
   return (
     <Router>
-      <Navbar seccion={seccion}/>
+      <Navbar seccion={seccion} />
       <main className="content-area">
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={
+            <div className="page-layout">
+              {carPrin.map(data => (
+                <Carrusel key={data.id} imagenes={data.imagenes} />
+              ))}
+            </div>
+          } />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={
             <ProtectedRoute seccion={seccion}>
               <AdminPanel seccion={seccion} />
             </ProtectedRoute>
-          }/>
+          } />
           <Route path="/galeria" element={
             <div className="page-layout">
               <h2>Explorar Galería</h2>
@@ -69,7 +75,7 @@ function App() {
           } />
           <Route path="/proyecto/:id" element={<DetalleProyecto />} />
           <Route path="/detalle/:proyectoId/:imagenId" element={<DetalleImagen />} />
-            
+
         </Routes>
       </main>
       <Footer />
