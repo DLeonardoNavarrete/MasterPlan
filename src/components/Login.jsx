@@ -22,7 +22,7 @@ export default function Login({ onBack }) {
     return (
         <div className="login-container">
             <button type="button" onClick={onBack} className="btn-back">Volver</button>
-            <h2>Inicias Sesión</h2>
+            <h2>Iniciar Sesión</h2>
             <form onSubmit={handleLogin}>
                 <input
                     type="email"
