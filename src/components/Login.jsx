@@ -6,7 +6,8 @@ export default function Login({ onBack }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
+        e.preventDefault();
         const { error } = await supabase.auth.signInWithPassword({
             email,
             password,
@@ -14,30 +15,28 @@ export default function Login({ onBack }) {
         if (error) {
             alert('Error: ' + error.message);
         } else {
-            navigate('/admin');
-            alert('Ya estás adentro!');
-            console.log("Usuario logueado: ", supabase.auth.user());
-        }
-        if (!error) {
+            console.log("Usuario logueado");
             navigate('/admin');
         }
     };
     return (
         <div className="login-container">
-            <button onClick={onBack}>Volver</button>
+            <button type="button" onClick={onBack} className="btn-back">Volver</button>
             <h2>Inicias Sesión</h2>
             <form onSubmit={handleLogin}>
                 <input
                     type="email"
-                    placeholder="Email"
+                    placeholder="Tu correo electrónico"
+                    required
                     onChange={(e) => setEmail(e.target.value)
                     } />
                 <input
                     type="password"
-                    placeholder="Contraseña"
+                    placeholder="Tu contraseña"
+                    required
                     onChange={(e) => setPassword(e.target.value)
                     } />
-                <button type="submit">Iniciar Sesión</button>
+                <button type="submit">Entrar</button>
             </form>
         </div>
     );
