@@ -15,6 +15,7 @@ export default function Login({ onBack }) {
             alert('Error al loguearse: ' + error.message);
         } else {
             alert('El logueo fue exitoso!');
+            console.log("Usuario logueado: ", supabase.auth.user());
         }
     };
     return (
