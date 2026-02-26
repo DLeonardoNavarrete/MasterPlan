@@ -8,7 +8,6 @@ const Navbar = ({ session }) => {
       <h1 className="nav-container">
       <nav>
         <Link to="/" className="nav-logo">MasterPlan</Link>
-        <Link to="/login">Acceso</Link>
         {session ? (
           <button onClick={() => supabase.auth.signOut()}>Cerrar Sesión</button>
         ) : (
