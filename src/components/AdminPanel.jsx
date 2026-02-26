@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../supabaseClient';
 
 const AdminPanel = ({ session }) => {
+  const userEmail = session?.user?.email;
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const AdminPanel = ({ session }) => {
   return (
     <div className="admin-panel">
       <h2>Panel de Control</h2>
-      <p>Bienvenido<strong>{session?.user?.email}</strong></p>
+      <p>Hola<strong>{userEmail}</strong></p>
       <hr />
       <div className="data-table">
         {datos.length > 0 ? (
