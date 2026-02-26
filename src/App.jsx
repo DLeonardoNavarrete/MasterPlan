@@ -55,15 +55,9 @@ function App() {
       <Navbar seccion={seccion}/>
       <main className="content-area">
         <Routes>
-          <Route path="/" element={
-            <div className="page-layout">
-              {carPrin.map(data => (
-                <Carrusel key={data.id} imagenes={data.imagenes} />
-              ))}
-            </div>
-          } />
+          <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login />} />
-          <Route path="/login" element={
+          <Route path="/admin" element={
             <ProtectedRoute seccion={seccion}>
               <AdminPanel seccion={seccion} />
             </ProtectedRoute>
