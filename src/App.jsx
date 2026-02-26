@@ -37,7 +37,7 @@ return (
 };
 
 function App() {
-  const [view, setView] = useState('home');
+ /*  const [view, setView] = useState('home'); */
   return (
     <Router>
       <Navbar />
@@ -57,14 +57,14 @@ function App() {
           } />
           <Route path="/proyecto/:id" element={<DetalleProyecto />} />
           <Route path="/detalle/:proyectoId/:imagenId" element={<DetalleImagen />} />
-          {view === 'home' && (
+{/*           {view === 'home' && (
             <seccion className="home-section">
               <button onClick={() => setView('login')}>Iniciar Sesión</button>
               <Home />
             </seccion>
           )}
           {view === 'login' && <Login onBack={() => setView('home')} />
-            }
+            } */}
             
         </Routes>
       </main>
