@@ -15,7 +15,7 @@ export default function Userview({ info }) {
           </div>
           <div>
             <label>Teléfono</label>
-            <p>{info.numero_celular}</p>
+            <p>{info.numero_celular_usuario}</p>
           </div>
           <div>
             <label>Cargo</label>
@@ -23,10 +23,10 @@ export default function Userview({ info }) {
           </div>
           <div>
             <label>Tipo de Contrato</label>
-            <p>{info.tipo_contrato}</p>
+            <p>{info.tipo_contrato_usuario}</p>
           </div>
           <label>Fecha de Contratación:</label>
-          <span>{info.fecha_contrato}</span>
+          <span>{info.fecha_contrato_usuario}</span>
         </div>
       </div>
     </div>
