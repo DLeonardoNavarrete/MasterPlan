@@ -4,7 +4,6 @@ export default function Userview({ info }) {
   return (
     <div className="user-card">
         <h2>📄 Ficha de {info.nombre_usuario}</h2>
-        <span className="status-badge">Activo</span>
       <div className="card-content">
         <div className="info-group">
           <label>Nombre</label>
@@ -21,7 +20,7 @@ export default function Userview({ info }) {
 
             <label>Tipo de Contrato</label>
             <p>{info.tipo_contrato_usuario}</p>
-            
+
           <label>Fecha de Contratación:</label>
           <span>{info.fecha_contrato_usuario}</span>
         </div>
