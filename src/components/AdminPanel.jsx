@@ -1,54 +1,32 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
+import Userview from './UserCard'; 
 
-const AdminPanel = ({ session }) => {
-  const userEmail = session?.user?.email;
-  const [datos, setDatos] = useState([]);
-
+export default function AdminPanel({ seccion }) {
+  const [perfil, setPerfil] = useState(null);
   useEffect(() => {
-    const fetchUserData = async () => {
+    async function cargarDatos() {
       const { data, error } = await supabase
         .from('registros_empresa')
         .select('*')
-        .eq('user_id', session.user.id);
-
-      if (!error) setDatos(data);
-    };
-
-    if (session) fetchUserData();
-  }, [session]);
-
+        .single(); 
+      if (error) {
+        console.error("Error al obtener datos:", error.message);
+      } else {
+        setPerfil(data);
+      }
+    }
+    if (seccion) cargarDatos();
+  }, [seccion]);
   return (
-    <div className="admin-panel">
-      <h2>Panel de Control</h2>
-      <p>Hola<strong>{userEmail}</strong></p>
-      <hr />
-      <div className="data-table">
-        {datos.length > 0 ? (
-          <table>
-            <thead>
-              <tr>
-                <th>Proyecto</th>
-                <th>Estado</th>
-                <th>Fecha</th>
-              </tr>
-            </thead>
-            <tbody>
-              {datos.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.nombre}</td>
-                  <td>{item.status}</td>
-                  <td>{new Date(item.created_at).toLocaleDateString()}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <p>No se encontraron registros para tu cuenta.</p>
-        )}
-      </div>
+    <div className="admin-layout">
+      <aside className="admin-sidebar">
+        <h2>Panel Personal</h2>
+        <p>Bienvenido, {seccion?.user?.email}</p>
+      </aside>
+      <main className="admin-main">
+        <Userview info={perfil} />
+      </main>
     </div>
   );
-};
-
-export default AdminPanel;
+}
