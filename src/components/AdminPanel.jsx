@@ -22,7 +22,7 @@ export default function AdminPanel({ seccion }) {
     <div className="admin-layout">
       <aside className="admin-sidebar">
         <h2>Panel Personal</h2>
-        <p>Bienvenido, {seccion?.user?.email}</p>
+        <p>Bienvenido, {seccion?.user?.nombre_usuario}</p>
       </aside>
       <main className="admin-main">
         <Userview info={perfil} />
