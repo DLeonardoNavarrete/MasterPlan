@@ -22,7 +22,6 @@ export default function Login({ onBack }) {
         const { data: userData } = await supabase
             .from('registros_empresa')
             .select('nombre_usuario')
-            .eq('email_usuario', email)
             .single();
         if (userData) {
             const slug = userData.nombre_usuario.toLowerCase().replace(/\s+/g, '-');
