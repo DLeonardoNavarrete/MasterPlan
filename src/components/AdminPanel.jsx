@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import Userview from './VistaUsuario'; 
+import { useParams } from 'react-router-dom';
 
 export default function AdminPanel({ seccion }) {
+  const { userName } = useParams();
   const [perfil, setPerfil] = useState(null);
   useEffect(() => {
     async function cargarDatos() {
@@ -20,10 +22,9 @@ export default function AdminPanel({ seccion }) {
   }, [seccion]);
   return (
     <div className="admin-layout">
-      <aside className="admin-sidebar">
-        <h2>Panel Personal</h2>
-        <p>Bienvenido, {seccion?.user?.nombre_usuario}</p>
-      </aside>
+      <div className="admin-sidebar">
+        <h2>{userName.replace(/-/g, ' ')}</h2>
+      </div>
       <main className="admin-main">
         <Userview info={perfil} />
       </main>
