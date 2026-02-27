@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
-import Userview from './UserCard'; 
+import Userview from './VistaUsuario'; 
 
 export default function AdminPanel({ seccion }) {
   const [perfil, setPerfil] = useState(null);
