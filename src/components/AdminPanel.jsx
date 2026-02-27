@@ -21,7 +21,7 @@ const AdminPanel = ({ session }) => {
   return (
     <div className="admin-panel">
       <h2>Panel de Control</h2>
-      <p>Hola<strong>{userEmail}{session.user.email}</strong></p>
+      <p>Hola<strong>{userEmail}</strong></p>
       <hr />
       <div className="data-table">
         {datos.length > 0 ? (
