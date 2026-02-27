@@ -10,7 +10,7 @@ const AuthStatus = ({ seccion }) => {
     if (seccion) {
         return(
             <div className="user-info">
-                <span>👤 {seccion.user.email}</span>
+                <span>👤</span>
                 <Link to="/admin" className="btn-perfil">Perfil</Link>
                 <button onClick={handleLogout} className="btn-salir-sesion">Cerrar sesión</button>
             </div>
