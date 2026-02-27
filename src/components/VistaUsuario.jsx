@@ -7,24 +7,21 @@ export default function Userview({ info }) {
         <span className="status-badge">Activo</span>
       <div className="card-content">
         <div className="info-group">
-          <label>Nombre Completo</label>
+          <label>Nombre</label>
           <p>{info.nombre_usuario} {info.apellido_usuario}</p>
-          <div>
+
             <label>Cédula</label>
             <p>{info.cedula_usuario}</p>
-          </div>
-          <div>
+
             <label>Teléfono</label>
             <p>{info.numero_celular_usuario}</p>
-          </div>
-          <div>
+
             <label>Cargo</label>
             <p>{info.cargo_usuario}</p>
-          </div>
-          <div>
+
             <label>Tipo de Contrato</label>
             <p>{info.tipo_contrato_usuario}</p>
-          </div>
+            
           <label>Fecha de Contratación:</label>
           <span>{info.fecha_contrato_usuario}</span>
         </div>
