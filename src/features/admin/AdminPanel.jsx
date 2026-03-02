@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { supabase } from '../api/supabaseClient';
+import { supabase } from '../../api/supabaseClient';
 import Userview from '../../pages/VistaUsuario'; 
 import { useParams } from 'react-router-dom';
 
