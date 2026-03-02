@@ -1,17 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { carPrin } from './data';
+
+// importación de datos
 import { useState, useEffect } from 'react';
-import { supabase } from './supabaseClient';
+import { supabase } from './api/supabaseClient';
+import { carPrin } from './utils/data';
+
+// importación de componentes 1a
+import SkeletonCarrusel from './components/SkeletonCarrusel';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Carrusel from './components/Carrusel';
-import DetalleImagen from './components/DetalleImagen';
-import DetalleProyecto from './components/DetalleProyecto';
-import SkeletonCarrusel from './components/SkeletonCarrusel';
-import Login from './components/Login';
-import AdminPanel from './components/AdminPanel';
-import ProtectedRoute from './components/ProtectedRoute';
 
+// importación de componentes 1b
+import DetalleProyecto from './features/projects/DetalleProyecto';
+import DetalleImagen from './features/projects/DetalleImagen';
+import Carrusel from './features/projects/Carrusel';
+
+// importación de rutas-seuridad
+import ProtectedRoute from './features/auth/ProtectedRoute';
+import AdminPanel from './features/admin/AdminPanel';
+import Login from './features/auth/Login';
+
+// codigo madre
 const Home = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {

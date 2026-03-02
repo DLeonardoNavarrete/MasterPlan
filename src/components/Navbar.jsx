@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-import AuthStatus from './AuthStatus';
+import '../styles/Navbar.css';
+import AuthStatus from '../features/auth/AuthStatus';
 
 const Navbar = ({ seccion }) => {
   return (
