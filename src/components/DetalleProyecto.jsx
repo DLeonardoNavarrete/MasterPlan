@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { detallesProyectos } from '../../utils/data';
+import { detallesProyectos } from './data';
 import Carrusel from './Carrusel';
 import { useState, useEffect,} from 'react';
 

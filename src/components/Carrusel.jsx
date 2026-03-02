@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import '../../styles/Carrusel.css';
+import './Carrusel.css';
 import { Link } from 'react-router-dom';
 
 const Carrusel = ({ imagenes, tituloSeccion, parrafoSeccion, idSeccion }) => {

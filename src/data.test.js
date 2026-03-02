@@ -1,5 +1,5 @@
-import { carPrin, detallesProyectos } from './utils/data';
 import { describe, it, expect } from 'vitest';
+import { carPrin, detallesProyectos } from './data';
 
 describe('Validacion de integridad de datos', () => {
     it('Todos los Ids del home deben existir en Detalle', () => {

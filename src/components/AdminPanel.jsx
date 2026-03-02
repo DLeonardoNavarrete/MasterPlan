@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { supabase } from '../../api/supabaseClient';
-import Userview from '../../pages/VistaUsuario'; 
+import { supabase } from './supabaseClient';
+import Userview from './VistaUsuario'; 
 import { useParams } from 'react-router-dom';
 
 export default function AdminPanel({ seccion }) {

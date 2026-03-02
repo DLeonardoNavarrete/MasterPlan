@@ -1,6 +1,6 @@
 import { useParams} from 'react-router-dom';
 import { carPrin } from '../../utils/data';
-import '../../styles/DetalleImagen.css';
+import './DetalleImagen.css';
 
 const DetalleImagen = () => {
   const { proyectoId, imagenId } = useParams();
