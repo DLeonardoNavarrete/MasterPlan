@@ -20,4 +20,5 @@ const DetalleImagen = () => {
     </div>
   );
 };
+
 export default DetalleImagen;
