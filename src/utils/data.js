@@ -2,32 +2,32 @@ export const carPrin = [
   {
     id: "quienes-somos",
     imagenes: [
-      { src: "/images/i1.webp", link: "/proyecto/quienes-somos", info: "Somos" },
-      { src: "/images/i2.webp", link: "/proyecto/quienes-somos", info: "MasterPlan" }
+      { src: "/src/assets/images/i1.webp", link: "/proyecto/quienes-somos", info: "Somos" },
+      { src: "/src/assets/images/i2.webp", link: "/proyecto/quienes-somos", info: "MasterPlan" }
     ],
   },
   {
     id: "que-hacemos",
     imagenes: [
-      { src: "/images/Masterplan-trabajo-en-proceso.webp", link: "/proyecto/que-hacemos", info: "asi trabajamos" },
+      { src: "/src/assets/images/Masterplan-trabajo-en-proceso.webp", link: "/proyecto/que-hacemos", info: "asi trabajamos" },
     ],
   },
   {
     id: "nuestros-clientes",
     imagenes: [
-      { src: "/images/i3.webp", link: "/proyecto/nuestros-clientes", info: "este es nuestro trabajo" },
+      { src: "/src/assets/images/i3.webp", link: "/proyecto/nuestros-clientes", info: "este es nuestro trabajo" },
     ],
   },
   {
     id: "equipo-de-trabajo",
     imagenes: [
-      { src: "/images/i4.webp", link: "/proyecto/equipo-de-trabajo", info: "nuestros pilares fundamentales" },
+      { src: "/src/assets/images/i4.webp", link: "/proyecto/equipo-de-trabajo", info: "nuestros pilares fundamentales" },
     ],
   },
   {
     id: "contacto",
     imagenes: [
-      { src: "/images/i5.webp", link: "/proyecto/contacto", info: "Contacta con nosotros" },
+      { src: "/src/assets/images/i5.webp", link: "/proyecto/contacto", info: "Contacta con nosotros" },
     ],
   }
 ];
@@ -38,15 +38,15 @@ export const detallesProyectos = [
     id: "quienes-somos",
     titulo: "Nuestra Historia",
     parrafo: "Descubre cómo comenzó MasterPlan y nuestra evolución en la gestión de proyectos.",
-    galeria: [{src: "/images/logo.webp", info: "Nuestro logo representa..." },
-              {src: "/images/MasterPlan-equipo-de-trabajo.webp", info: "Nuestro equipo en acción", link: "/proyecto/equipo-de-trabajo"}]
+    galeria: [{src: "/src/assets/images/logo.webp", info: "Nuestro logo representa..." },
+              {src: "/src/assets/images/MasterPlan-equipo-de-trabajo.webp", info: "Nuestro equipo en acción", link: "/proyecto/equipo-de-trabajo"}]
   },
   {
     id: "que-hacemos",
     titulo: "Nuestros Servicios",
     parrafo: "Explora la variedad de servicios de gestión de proyectos que ofrecemos para impulsar tu éxito.",
     galeria: [
-      { src: "/images/i1.webp", info: "que hacemos" }
+      { src: "/src/assets/images/i1.webp", info: "que hacemos" }
     ]
   },
   {
@@ -54,7 +54,7 @@ export const detallesProyectos = [
     titulo: "Clientes al 100% satisfechos",
     parrafo: "Conoce al talentoso equipo detrás de MasterPlan, dedicado a llevar tus proyectos al siguiente nivel.",
     galeria: [
-      { src: "/images/MasterPlan-nuestros-clientes.png", info: "nuestros clientes" },
+      { src: "/src/assets/images/MasterPlan-nuestros-clientes.png", info: "nuestros clientes" },
     ]
   },
   {
@@ -62,7 +62,7 @@ export const detallesProyectos = [
     titulo: "MP-Team",
     parrafo: "De los mejores equipos de todos los tiempos",
     galeria: [
-      { src: "/images/MasterPlan-equipo-de-trabajo.webp", info: "AaBbCcDdEe" }
+      { src: "/src/assets/images/MasterPlan-equipo-de-trabajo.webp", info: "AaBbCcDdEe" }
     ]
   },
   {
@@ -70,7 +70,7 @@ export const detallesProyectos = [
     titulo: "Contáctanos",
     parrafo: "Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o soporte.",
     galeria: [
-      { src: "/images/MasterPlan-Contacto.webp", info:'3208233592', link:'https://wa.me/573208233592?text=Hola%20M_P%20estoy%20interesado%20en%20sus%20servicios' , pestañaNueva:true}
+      { src: "/src/assets/images/MasterPlan-Contacto.webp", info:'3208233592', link:'https://wa.me/573208233592?text=Hola%20M_P%20estoy%20interesado%20en%20sus%20servicios' , pestañaNueva:true}
     ]
   }
 ];
