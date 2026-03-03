@@ -1,5 +1,4 @@
 name: Deploy a Hostinger
-
 on:
   push:
     branches:
