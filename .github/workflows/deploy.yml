@@ -1,0 +1,35 @@
+name: Deploy a Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Obtener código
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20 
+
+      - name: 🏗️ Construir el proyecto (Build)
+        run: |
+          npm install
+          echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}" > .env
+          echo "VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}" >> .env
+          npm run build
+
+      - name: 🚀 Subir archivos a Hostinger vía FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./public_html/
