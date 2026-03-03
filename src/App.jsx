@@ -63,7 +63,12 @@ function App() {
             </div>
           } />
           <Route path="/login" element={<Login />} />
-          <Route path="/user/:userName" element={
+          <Route path="/register" element={
+            <ProtectedRoute seccion={seccion}>
+              <AdminPanel seccion={seccion} />
+            </ProtectedRoute>
+          } />
+          <Route path="/user" element={
             <ProtectedRoute seccion={seccion}>
               <AdminPanel seccion={seccion} />
             </ProtectedRoute>
