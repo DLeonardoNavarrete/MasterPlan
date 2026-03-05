@@ -68,7 +68,7 @@ function App() {
               <AdminPanel seccion={seccion} />
             </ProtectedRoute>
           } />
-          <Route path="/admin" element={
+          <Route path="/user/:userName" element={
             <ProtectedRoute seccion={seccion}>
               <AdminPanel seccion={seccion} />
             </ProtectedRoute>
