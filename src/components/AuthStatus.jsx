@@ -11,7 +11,7 @@ const AuthStatus = ({ seccion }) => {
         return(
             <div className="user-info">
                 <span>👤</span>
-                <Link to='/user' className="btn-perfil">Perfil</Link>
+                <Link to='/admin' className="btn-perfil">Perfil</Link>
                 <button onClick={handleLogout} className="btn-salir-sesion">Cerrar sesión</button>
             </div>
         );

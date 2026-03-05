@@ -17,7 +17,7 @@ export default function Login({ onBack }) {
         if (error) {
             alert("Error" + error.message);
         } else {
-            navigate('/user');
+            navigate('/admin');
         }
         const { data: userData } = await supabase
             .from('registros_empresa')
