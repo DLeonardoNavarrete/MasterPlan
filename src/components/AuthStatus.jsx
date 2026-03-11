@@ -1,5 +1,7 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../supabaseClient';
+import ProtectedRoute from './ProtectedRoute';
+import AdminPanel from './AdminPanel';
 
 const AuthStatus = ({ seccion }) => {
     const navigate = useNavigate();
@@ -11,7 +13,12 @@ const AuthStatus = ({ seccion }) => {
         return(
             <div className="user-info">
                 <span>👤</span>
-                <Link to='/user' className="btn-perfil">Perfil</Link>
+                <Link to="/user:userName" className="btn-perfil"
+                element={
+                <ProtectedRoute seccion={seccion}>
+                    <AdminPanel seccion={seccion}/>
+                </ProtectedRoute>
+                } >Perfil</ Link >
                 <button onClick={handleLogout} className="btn-salir-sesion">Cerrar sesión</button>
             </div>
         );
