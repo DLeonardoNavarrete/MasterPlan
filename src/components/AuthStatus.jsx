@@ -13,12 +13,12 @@ const AuthStatus = ({ seccion }) => {
         return(
             <div className="user-info">
                 <span>👤</span>
-                <Route path="/user:userName" className="btn-perfil"
+                <Link to="/user:userName" className="btn-perfil"
                 element={
                 <ProtectedRoute seccion={seccion}>
                     <AdminPanel seccion={seccion}/>
                 </ProtectedRoute>
-                } >Perfil </Route>
+                } >Perfil </Link>
                 <button onClick={handleLogout} className="btn-salir-sesion">Cerrar sesión</button>
             </div>
         );
